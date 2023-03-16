@@ -14,6 +14,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
+p{color:red}
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,6 +27,7 @@ a:hover {
 }
 
 body {
+  background-color: rgb(209, 193, 193);
   margin: 0;
   display: flex;
   place-items: center;
@@ -36,9 +40,7 @@ h1 {
   line-height: 1.1;
 }
 
-.card {
-  padding: 2em;
-}
+
 
 #app {
   max-width: 1280px;
@@ -49,12 +51,12 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+box-shadow: 10px 3px 3px black;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: transparent;
   cursor: pointer;
   transition: border-color 0.25s;
 }

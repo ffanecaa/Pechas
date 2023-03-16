@@ -5,7 +5,7 @@
   gasto
   <input type="number" bind:value={totalGasto}>
   </label> 
-</main>
+
 
 
 
@@ -21,21 +21,22 @@
   <table><tr>
      <td>nombre:{ usuario.nombre}</td>
    <td>entrega:{usuario.aporte}</td>
-   <td>saldo:{(usuario.aporte)-cadaUsuario}</td>
+   <td>saldo:{(usuario.aporte)-cadaUsuario}</td>    <!-- lo que me convendria pasar a saldo  -->
+ <td> <Saldo saldo={(usuario.aporte)-cadaUsuario}/></td>
   
   
   
  </tr>
  </table>
- icono<Saldo saldo={pasta}/>
+
    {/each} 
-
-
+  </main>
+   <!-- icono<Saldo bind:saldo={pasta}/> -->
 <script>
 let aportadoPorPersona
   let totalGasto
   let cadaUsuario
-  let aporte=[]
+  // let aporte
   let pasta
 let recorrerArray=[]
 import Aportacion from "./components/Aportacion/Aportacion.svelte";
@@ -43,9 +44,41 @@ import Saldo from "./components/Saldo/Saldo.svelte";
 
 
 
- $:pasta=aportadoPorPersona-cadaUsuario
+  $:pasta = aportadoPorPersona-cadaUsuario
 
 
 
 
 </script>
+
+<style>
+  main{
+    display:flex;
+   justify-content: center;
+   align-content: center;
+    width:900px;
+    background-color: blue;
+    height:150px ;
+    margin:50px;
+    padding: center;
+    text-align: center;
+
+  }
+table:nth-child(even){
+  background-color: rgba(210, 69, 26, 0.218);
+}
+table:nth-child(odd){
+  background-color: rgb(110, 174, 197);
+}
+input {
+  width: 300px;
+  height: 60px;
+
+ ;
+}
+
+label, input{
+  font-size: 3rem;
+  padding: 2px;
+}
+</style>

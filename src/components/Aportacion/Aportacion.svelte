@@ -1,47 +1,57 @@
 
 
 <main>
-    <label >nombre
+    <label >Nombre
         <input type="text" bind:value={nombre}>
     </label>
-    <label >aportacion
+    <label >Aportacion
         <input type="number" bind:value={aportadoPorPersona}>
     </label>
     <button on:click ={manexador}>Añadir</button>
-    <p>{numeroParticipantes}</p>
+    <p>Participantes {numeroParticipantes}</p>
 </main>
-<!-- <Saldo  bind:saldo={saldo}/> -->
 
 <script>
- import Saldo from "../Saldo/Saldo.svelte";
+
+ let numeroParticipantes=0
+ let clase
+ let nombre=""
+ export let aportadoPorPersona =0 
+ export let cadaUsuario
  export let arrayParticipantes =[]
  export let totalGasto
-// export let saldo
-let loQueQueda
- let numeroParticipantes=0
-let clase
-let nombre=""
-export let aportadoPorPersona =0 
- export let cadaUsuario
 
-
+/* guardo obx en array*/
 function manexador (){
    let usuarios = [...arrayParticipantes]
    usuarios.push(clase)
    arrayParticipantes=usuarios
 }
-$:cadaUsuario= (totalGasto/numeroParticipantes)
 
+/* calcculo lo que tiene q pagar cada uno, al que se van agregando participantes*/
+$:cadaUsuario= (totalGasto/numeroParticipantes)
+/* hayo el numero de participantes se van agregando */
 $:{numeroParticipantes =arrayParticipantes.length}
+
+/* creo el boxecto */
 $:{
     clase= {
         nombre:nombre,
         aporte:aportadoPorPersona
-        
-
     }
 }
 
 
 
 </script>
+
+<style>
+  
+main{
+    width:900px;
+    background-color: blue;
+    height:150px ;
+    margin:50px;
+}
+
+</style>
