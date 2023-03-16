@@ -1,8 +1,8 @@
 
-
-<main>
+<h1 class="h1"> PECHASS</h1>
+<main class="appSvelte">
   <label >
-  gasto
+ GASTO
   <input type="number" bind:value={totalGasto}>
   </label> 
 
@@ -18,10 +18,10 @@
           <!-- bind:saldo={saldo}/> -->
           
   {#each recorrerArray as usuario}
-  <table><tr>
-     <td>nombre:{ usuario.nombre}</td>
-   <td>entrega:{usuario.aporte}</td>
-   <td>saldo:{(usuario.aporte)-cadaUsuario}</td>    <!-- lo que me convendria pasar a saldo  -->
+  <table class='table'><tr>
+     <td>Nombre: { usuario.nombre}</td>
+   <td>Entrega: {usuario.aporte}</td>
+   <td>saldo: {(usuario.aporte)-cadaUsuario}</td>    <!-- lo que me convendria pasar a saldo  -->
  <td> <Saldo saldo={(usuario.aporte)-cadaUsuario}/></td>
   
   
@@ -51,24 +51,23 @@ import Saldo from "./components/Saldo/Saldo.svelte";
 
 </script>
 
-<style>
+ <style>
   main{
-    display:flex;
-   justify-content: center;
-   align-content: center;
-    width:900px;
-    background-color: blue;
-    height:150px ;
-    margin:50px;
-    padding: center;
-    text-align: center;
+    display:grid;
+    
+  
+  
 
   }
 table:nth-child(even){
   background-color: rgba(210, 69, 26, 0.218);
+  font-size: 1.2rem;
+  color:white;
 }
 table:nth-child(odd){
-  background-color: rgb(110, 174, 197);
+  background-color: rgba(110, 174, 197, 0.396);
+  font-size: 1.2rem;
+  color:white;
 }
 input {
   width: 300px;
@@ -81,4 +80,4 @@ label, input{
   font-size: 3rem;
   padding: 2px;
 }
-</style>
+</style> 

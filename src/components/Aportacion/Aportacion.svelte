@@ -1,6 +1,6 @@
 
 
-<main>
+<main class="aportacion">
     <label >Nombre
         <input type="text" bind:value={nombre}>
     </label>
@@ -47,11 +47,11 @@ $:{
 
 <style>
   
-main{
+/* main{
     width:900px;
     background-color: blue;
     height:150px ;
     margin:50px;
-}
+} */
 
 </style>
