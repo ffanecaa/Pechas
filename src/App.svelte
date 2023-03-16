@@ -1,8 +1,8 @@
 
-<h1 class="h1"> PECHASS</h1>
+<h1 class="texto"> PECHAS<span>SSS</span></h1>
 <main class="appSvelte">
-  <label >
- GASTO
+  <label class="texto" >
+GASTO
   <input type="number" bind:value={totalGasto}>
   </label> 
 
@@ -19,9 +19,9 @@
           
   {#each recorrerArray as usuario}
   <table class='table'><tr>
-     <td>Nombre: { usuario.nombre}</td>
-   <td>Entrega: {usuario.aporte}</td>
-   <td>saldo: {(usuario.aporte)-cadaUsuario}</td>    <!-- lo que me convendria pasar a saldo  -->
+     <td>NOMBRE: <span> { usuario.nombre}  </span> </td>
+   <td>ENTREGA:  <span>  {usuario.aporte}  </span> </td>
+   <td>SALDO: <span>  {(usuario.aporte)-cadaUsuario}  </span> </td>    <!-- lo que me convendria pasar a saldo  -->
  <td> <Saldo saldo={(usuario.aporte)-cadaUsuario}/></td>
   
   
@@ -52,20 +52,14 @@ import Saldo from "./components/Saldo/Saldo.svelte";
 </script>
 
  <style>
-  main{
-    display:grid;
-    
-  
-  
 
-  }
 table:nth-child(even){
-  background-color: rgba(210, 69, 26, 0.218);
+  background-color: rgba(220, 181, 169, 0.218);
   font-size: 1.2rem;
   color:white;
 }
 table:nth-child(odd){
-  background-color: rgba(110, 174, 197, 0.396);
+  background-color: rgba(137, 188, 207, 0.396);
   font-size: 1.2rem;
   color:white;
 }
@@ -80,4 +74,42 @@ label, input{
   font-size: 3rem;
   padding: 2px;
 }
+.texto {
+    display: inline-block;
+    font-size: 5em;
+  
+    
+}
+
+.texto span {
+    display: inline-block;
+    transform-origin: 50% 50%;
+    animation: distorsion 20s ease-in-out infinite;
+}
+
+@keyframes distorsion {
+    0% {
+        transform: translateZ(0) rotateY(0) rotateX(0);
+    }
+    50% {
+        transform: translateZ(100px) rotateY(180deg) rotateX(180deg);
+    }
+    100% {
+        transform: translateZ(0) rotateY(360deg) rotateX(360deg);
+    }
+}
+  td{
+    font-weight: 600;
+   
+  }
+  td span{
+    color: #213547;
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 4px;
+    text-transform: uppercase;
+   
+  }
+  
+  
 </style> 

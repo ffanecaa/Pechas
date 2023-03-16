@@ -47,11 +47,6 @@ $:{
 
 <style>
   
-/* main{
-    width:900px;
-    background-color: blue;
-    height:150px ;
-    margin:50px;
-} */
+
 
 </style>
