@@ -15,7 +15,8 @@
 <script>
   export let saldo=0
 /*  $: {
-  if(saldo >0 ) icono=f
+let icono = 👎🏻
+  if(saldo >0 ) icono =👎🏻
 } */
 
 </script>
