@@ -54,12 +54,12 @@ import Saldo from "./components/Saldo/Saldo.svelte";
  <style>
 
 table:nth-child(even){
-  background-color: rgba(220, 181, 169, 0.218);
+  background-color: #938c3147;
   font-size: 1.2rem;
   color:white;
 }
 table:nth-child(odd){
-  background-color: rgba(137, 188, 207, 0.396);
+  background-color: #eb250b2f;;
   font-size: 1.2rem;
   color:white;
 }
@@ -100,13 +100,16 @@ label, input{
 }
   td{
     font-weight: 600;
+    color:#938c31;
+    text-shadow: 1px 1px 2px white;
+    font-size: 1.6rem;
    
   }
   td span{
-    color: #213547;
+    color: #eb250bc3;
     font-weight: 900;
     font-size: 1.6rem;
-    text-shadow: 2px 2px 4px;
+    text-shadow: 1px 1px 2px white;
     text-transform: uppercase;
    
   }

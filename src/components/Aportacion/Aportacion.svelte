@@ -1,6 +1,6 @@
 
 
-<main class="aportacion">
+<div class="aportacion">
     <label >Nombre
         <input type="text" bind:value={nombre}>
     </label>
@@ -9,7 +9,7 @@
     </label>
     <button on:click ={manexador}>Añadir</button>
     <p>Participantes {numeroParticipantes}</p>
-</main>
+</div>
 
 <script>
 
@@ -46,7 +46,9 @@ $:{
 </script>
 
 <style>
-  
+  input{
+    color:#938C31
+  }
 
 
 </style>
