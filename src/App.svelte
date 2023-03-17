@@ -36,16 +36,21 @@ GASTO
 let aportadoPorPersona
   let totalGasto
   let cadaUsuario
+  let valor
   // let aporte
   let pasta
 let recorrerArray=[]
 import Aportacion from "./components/Aportacion/Aportacion.svelte";
 import Saldo from "./components/Saldo/Saldo.svelte";
 
-
+function reduce (n){
+ return Math.round(n*100)/100
+}
+ valor = ( reduce(cadaUsuario))
 
   $:pasta = aportadoPorPersona-cadaUsuario
 
+  
 
 
 
